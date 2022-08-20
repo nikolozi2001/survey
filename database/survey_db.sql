@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 20, 2022 at 07:59 AM
+-- Generation Time: Aug 20, 2022 at 08:22 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -127,7 +127,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `firstname`, `lastname`, `middlename`, `contact`, `address`, `email`, `password`, `type`, `date_created`) VALUES
-(1, 'Admin', 'Admin', '', '12345678912', 'Sample address', 'admin@admin.com', 'd41d8cd98f00b204e9800998ecf8427e', 1, '2020-11-10 08:43:06'),
+(1, 'Admin', 'Admin', '', '12345678912', 'Sample address', 'admin@admin.com', '0192023a7bbd73250516f069df18b500', 1, '2020-11-10 08:43:06'),
 (5, 'Nika', 'Kachibaia', '', '29801042543', 'xxx', 'nkachibaia@geostat.ge', 'd41d8cd98f00b204e9800998ecf8427e', 1, '2022-08-19 10:22:58');
 
 --
