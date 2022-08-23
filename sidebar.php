@@ -77,7 +77,15 @@
                 Survey Report
               </p>
             </a>
-          </li>     
+          </li>
+            <li class="nav-item">
+                <a href="./surveytable/index.php" class="nav-link nav-survey_report">
+                    <i class="nav-icon fas fa-solid fa-table"></i>
+                    <p>
+                        Table
+                    </p>
+                </a>
+            </li>
         <?php else: ?>
           <li class="nav-item">
             <a href="./index.php?page=survey_widget" class="nav-link nav-survey_widget nav-answer_survey">
