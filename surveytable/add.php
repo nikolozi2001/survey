@@ -8,7 +8,7 @@
 	$mimdinaretve=$_POST['mimdinaretve'];
 	$komentari=$_POST['komentari'];
 		
-	mysqli_query($conn,"insert into `user` (saxeoba,erteuli,sabazrotve,winatve,mimdinaretve,komentari) values ('$saxeoba','$erteuli','$sabazrotve','$winatve','$mimdinaretve','$komentari')");
+	mysqli_query($conn,"insert into `products` (saxeoba,erteuli,sabazrotve,winatve,mimdinaretve,komentari) values ('$saxeoba','$erteuli','$sabazrotve','$winatve','$mimdinaretve','$komentari')");
 	header('location:index.php');
 	
 ?>

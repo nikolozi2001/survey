@@ -1,7 +1,7 @@
 <?php
 	include('conn.php');
 	$id=$_GET['id'];
-	$query=mysqli_query($conn,"select * from `user` where userid='$id'");
+	$query=mysqli_query($conn,"select * from `products` where userid='$id'");
 	$row=mysqli_fetch_array($query);
 ?>
 <!DOCTYPE html>

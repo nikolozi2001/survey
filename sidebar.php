@@ -78,7 +78,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="./surveytable/index.php" class="nav-link nav-survey_report">
+              <a href="./surveytable/index.php" class="nav-link">
                 <i class="nav-icon fas fa-solid fa-table"></i>
                 <p>
                   Table

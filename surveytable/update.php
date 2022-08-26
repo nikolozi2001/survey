@@ -9,6 +9,6 @@
 	$mimdinaretve=$_POST['mimdinaretve'];
 	$komentari=$_POST['komentari'];
 	
-	mysqli_query($conn,"update `user` set saxeoba='$saxeoba', erteuli='$erteuli', sabazrotve='$sabazrotve', winatve='$winatve', mimdinaretve='$mimdinaretve', komentari='$komentari' where userid='$id'");
+	mysqli_query($conn,"update `products` set saxeoba='$saxeoba', erteuli='$erteuli', sabazrotve='$sabazrotve', winatve='$winatve', mimdinaretve='$mimdinaretve', komentari='$komentari' where userid='$id'");
 	header('location:index.php');
 ?>

@@ -48,7 +48,7 @@
 			<tbody>
 				<?php
 				include('conn.php');
-				$query = mysqli_query($conn, "select * from `user`");
+				$query = mysqli_query($conn, "select * from `products`");
 				while ($row = mysqli_fetch_array($query)) {
 				?>
 					<tr>
