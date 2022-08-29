@@ -90,3 +90,5 @@ th, td {
 .form-text-input{
     display: grid;
 }
+
+.table-active:nth-child(even) {background-color: #ccc;}

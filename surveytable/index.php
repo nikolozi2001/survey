@@ -32,7 +32,7 @@
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/responsive.css">
-	<title>geostat-table</title>
+	<title>Geostat-Table</title>
 </head>
 
 <body>
@@ -75,7 +75,7 @@
 				$query = mysqli_query($conn, "select * from `products`");
 				while ($row = mysqli_fetch_array($query)) {
 				?>
-					<tr class="table-hover">
+					<tr class="table-active">
 						<td><?php echo $row['saxeoba']; ?></td>
 						<td><?php echo $row['erteuli']; ?></td>
 						<td><?php echo $row['sabazrotve']; ?></td>
