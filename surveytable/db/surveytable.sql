@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 23, 2022 at 06:09 PM
+-- Generation Time: Aug 29, 2022 at 07:48 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -18,16 +18,16 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `basic_command`
+-- Database: `surveytable`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Table structure for table `products`
 --
 
-CREATE TABLE `user` (
+CREATE TABLE `products` (
   `userid` int(11) NOT NULL,
   `saxeoba` varchar(30) NOT NULL,
   `erteuli` varchar(30) NOT NULL,
@@ -38,24 +38,26 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `user`
+-- Dumping data for table `products`
 --
 
-INSERT INTO `user` (`userid`, `saxeoba`, `erteuli`, `sabazrotve`, `winatve`, `mimdinaretve`, `komentari`) VALUES
+INSERT INTO `products` (`userid`, `saxeoba`, `erteuli`, `sabazrotve`, `winatve`, `mimdinaretve`, `komentari`) VALUES
 (1, 'neovic', 'devierte', NULL, NULL, NULL, NULL),
 (3, 'lee', 'ann', NULL, NULL, NULL, NULL),
 (4, 'nika', 'kachibaia', NULL, NULL, NULL, NULL),
 (8, 'saxeoba', 'erteuli', 'sabazrotve', 'winatve', 'mimdinaretve', 'komentari'),
-(9, '', '', '', '', '', 'asufuahfuiashuifhasiuhfuiashfiuasfhasiuhfasihfiuas');
+(9, '', '', '', '', '', 'asufuahfuiashuifhasiuhfuiashfiuasfhasiuhfasihfiuas'),
+(10, '', '', '', '', '', 'es aris chemi komentari'),
+(11, 'produqti', 'product', 'products', 'productionio', 'product', 'production');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `user`
+-- Indexes for table `products`
 --
-ALTER TABLE `user`
+ALTER TABLE `products`
   ADD PRIMARY KEY (`userid`);
 
 --
@@ -63,10 +65,10 @@ ALTER TABLE `user`
 --
 
 --
--- AUTO_INCREMENT for table `user`
+-- AUTO_INCREMENT for table `products`
 --
-ALTER TABLE `user`
-  MODIFY `userid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+ALTER TABLE `products`
+  MODIFY `userid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
