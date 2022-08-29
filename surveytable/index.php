@@ -1,8 +1,22 @@
+<!-- loginis shemowmeba -->
 
-<?php include('../header.php'); ?>
-<?php 
-if(isset($_SESSION['login_id']))
-header("location:index.php?page=home");
+<?php
+// if (!isset($_SESSION['login_id']))
+// 	header('location:../login.php');
+// include 'header.php';
+// exit();
+// session_start();
+
+
+// if (isset($_SESSION['login_id']) && $_SESSION['login_id']) {
+//     header("Location: ../login.php"); 
+//     exit();
+// }
+
+// if (!$_SESSION['email']){
+// 	header('Location: ../login.php');
+// 	exit();
+// }
 
 ?>
 
@@ -14,37 +28,39 @@ header("location:index.php?page=home");
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/png" href="https://www.geostat.ge/img/favicon.ico">
+	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/responsive.css">
 	<title>geostat-table</title>
 </head>
 
 <body>
-	<div class="container-fluid container-sm">
-		<form method="POST" action="add.php">
-			<label>პროდუქტის სახეობა:</label><input type="text" name="saxeoba">
-			<label>ზომის ერთეული:</label><input type="text" name="erteuli">
-			<label>საბაზრო თვე:</label><input type="text" name="sabazrotve">
-			<label>წინა თვე:</label><input type="text" name="winatve">
-			<label>მიმდინარე თვე:</label><input type="text" name="mimdinaretve">
-			<label>კომენტარი:</label><input type="text" name="komentari">
-			<input type="submit" name="add">
+	<div class="container container-sm">
+		<form method="POST" action="add.php" class="form-text-input">
+			<label>პროდუქტის სახეობა:</label><input class="p-2 flex-fill" type="text" name="saxeoba">
+			<label>ზომის ერთეული:</label><input class="p-2 flex-fill" type="text" name="erteuli">
+			<label>საბაზრო თვე:</label><input class="p-2 flex-fill" type="text" name="sabazrotve">
+			<label>წინა თვე:</label><input class="p-2 flex-fill" type="text" name="winatve">
+			<label>მიმდინარე თვე:</label><input class="p-2 flex-fill" type="text" name="mimdinaretve">
+			<label>კომენტარი:</label><input class="p-2 flex-fill" type="text" name="komentari">
+			<input class="p-2 flex-fill" type="submit" name="add">
 		</form>
 	</div>
 	<br>
-	<div class="container-fluid">
+	<div class="container">
 		<table border="1" class="table-responsive">
-			<thead>
+			<thead class="table_background">
 				<th colspan="1">#</th>
 				<th colspan="1">CPA კოდი</th>
 				<th colspan="5">პროდუქტის დასახელება</th>
 			</thead>
-			<thead>
+			<thead class="table_background">
 				<th colspan="1">1</th>
 				<th colspan="1"></th>
 				<th colspan="5"></th>
 			</thead>
-			<thead>
+			<thead class="table_background">
 				<th>პროდუქტის სახეობა</th>
 				<th>ზომის ერთეული</th>
 				<th>საბაზრო თვე</th>
@@ -59,7 +75,7 @@ header("location:index.php?page=home");
 				$query = mysqli_query($conn, "select * from `products`");
 				while ($row = mysqli_fetch_array($query)) {
 				?>
-					<tr>
+					<tr class="table-hover">
 						<td><?php echo $row['saxeoba']; ?></td>
 						<td><?php echo $row['erteuli']; ?></td>
 						<td><?php echo $row['sabazrotve']; ?></td>
@@ -77,6 +93,8 @@ header("location:index.php?page=home");
 			</tbody>
 		</table>
 	</div>
+	<script src="js/script.js"></script>
+	<script src="js/bootstrap.js"></script>
 </body>
 
 </html>

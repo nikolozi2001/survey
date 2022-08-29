@@ -1,5 +1,4 @@
 @media (min-width: 576px) {
-
     .container-sm,
     .container {
         max-width: 540px;
@@ -7,7 +6,6 @@
 }
 
 @media (min-width: 768px) {
-
     .container-md,
     .container-sm,
     .container {
@@ -16,7 +14,6 @@
 }
 
 @media (min-width: 992px) {
-
     .container-lg,
     .container-md,
     .container-sm,
@@ -26,7 +23,6 @@
 }
 
 @media (min-width: 1200px) {
-
     .container-xl,
     .container-lg,
     .container-md,
@@ -37,7 +33,6 @@
 }
 
 @media (min-width: 1400px) {
-
     .container-xxl,
     .container-xl,
     .container-lg,
@@ -50,22 +45,8 @@
 
 /* start table responsive */
 
-@media (max-width: 575.98px) {
-    .table-responsive-sm {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-    }
-}
-
-@media (max-width: 767.98px) {
-    .table-responsive-md {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-    }
-}
-
-@media (max-width: 991.98px) {
-    .table-responsive-lg {
+@media (max-width: 1399.98px) {
+    .table-responsive-xxl {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
     }
@@ -78,8 +59,21 @@
     }
 }
 
-@media (max-width: 1399.98px) {
-    .table-responsive-xxl {
+@media (max-width: 991.98px) {
+    .table-responsive-lg {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .table-responsive-md {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+@media (max-width: 575.98px) {
+    .table-responsive-sm {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
     }
