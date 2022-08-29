@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 29, 2022 at 07:48 AM
+-- Generation Time: Aug 29, 2022 at 03:27 PM
 -- Server version: 10.4.24-MariaDB
--- PHP Version: 8.1.6
+-- PHP Version: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -29,12 +29,12 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `products` (
   `userid` int(11) NOT NULL,
-  `saxeoba` varchar(30) NOT NULL,
-  `erteuli` varchar(30) NOT NULL,
-  `sabazrotve` varchar(50) DEFAULT NULL,
-  `winatve` varchar(50) DEFAULT NULL,
-  `mimdinaretve` varchar(50) DEFAULT NULL,
-  `komentari` varchar(50) DEFAULT NULL
+  `saxeoba` varchar(30) CHARACTER SET utf8 NOT NULL,
+  `erteuli` varchar(30) CHARACTER SET utf8 NOT NULL,
+  `sabazrotve` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
+  `winatve` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
+  `mimdinaretve` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
+  `komentari` varchar(50) CHARACTER SET utf8 DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -42,8 +42,8 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`userid`, `saxeoba`, `erteuli`, `sabazrotve`, `winatve`, `mimdinaretve`, `komentari`) VALUES
-(1, 'neovic', 'devierte', NULL, NULL, NULL, NULL),
-(3, 'lee', 'ann', NULL, NULL, NULL, NULL),
+(1, 'neovic', 'devierte', 'sabazro tve', '', '', ''),
+(3, 'lee', 'ann', 'ჰოდა ეგრე', 'გავანადგურე', '', ''),
 (4, 'nika', 'kachibaia', NULL, NULL, NULL, NULL),
 (8, 'saxeoba', 'erteuli', 'sabazrotve', 'winatve', 'mimdinaretve', 'komentari'),
 (9, '', '', '', '', '', 'asufuahfuiashuifhasiuhfuiashfiuasfhasiuhfasihfiuas'),
