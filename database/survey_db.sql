@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 20, 2022 at 08:22 AM
+-- Generation Time: Aug 29, 2022 at 07:49 AM
 -- Server version: 10.4.24-MariaDB
--- PHP Version: 7.4.29
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -77,8 +77,8 @@ INSERT INTO `questions` (`id`, `question`, `frm_option`, `type`, `order_by`, `su
 (7, 'ზომის ერთეული', '', 'textfield_s', 2, 6, '2022-08-19 11:26:20'),
 (8, 'საბაზრო თვე', '', 'textfield_s', 3, 6, '2022-08-19 11:26:43'),
 (9, 'წინა თვე', '', 'textfield_s', 4, 6, '2022-08-19 11:26:58'),
-(10, 'მიმდინარე თვე', '', 'textfield_s', 6, 6, '2022-08-19 11:27:09'),
-(11, 'კომენტარი', '', 'textfield_s', 5, 6, '2022-08-19 11:27:19');
+(10, 'მიმდინარე თვე', '', 'textfield_s', 5, 6, '2022-08-19 11:27:09'),
+(11, 'კომენტარი', '', 'textfield_s', 6, 6, '2022-08-19 11:27:19');
 
 -- --------------------------------------------------------
 
@@ -128,7 +128,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `firstname`, `lastname`, `middlename`, `contact`, `address`, `email`, `password`, `type`, `date_created`) VALUES
 (1, 'Admin', 'Admin', '', '12345678912', 'Sample address', 'admin@admin.com', '0192023a7bbd73250516f069df18b500', 1, '2020-11-10 08:43:06'),
-(5, 'Nika', 'Kachibaia', '', '29801042543', 'xxx', 'nkachibaia@geostat.ge', 'd41d8cd98f00b204e9800998ecf8427e', 1, '2022-08-19 10:22:58');
+(5, 'Nika', 'Kachibaia', '', '29801042543', 'xxx', 'nkachibaia@geostat.ge', '0192023a7bbd73250516f069df18b500', 1, '2022-08-19 10:22:58');
 
 --
 -- Indexes for dumped tables
