@@ -1,3 +1,11 @@
+
+<?php include('../header.php'); ?>
+<?php 
+if(isset($_SESSION['login_id']))
+header("location:index.php?page=home");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
