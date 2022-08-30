@@ -36,6 +36,12 @@
 </head>
 
 <body>
+	<div class="dashboard container">
+		<a class="dashboard-btn p-2 flex-fill" href="../index.php" target="" rel="noopener noreferrer">მთავარი გვერდი</a>
+	</div>
+	<di class="container">
+		<h4 class="p-2">ახალი ჩანაწერის დამატება</h4>
+	</di>
 	<div class="container container-sm">
 		<form method="POST" action="add.php" class="form-text-input">
 			<label>პროდუქტის სახეობა:</label><input class="p-2 flex-fill" type="text" name="saxeoba">
@@ -82,9 +88,9 @@
 						<td><?php echo $row['winatve']; ?></td>
 						<td><?php echo $row['mimdinaretve']; ?></td>
 						<td><?php echo $row['komentari']; ?></td>
-						<td>
-							<a href="edit.php?id=<?php echo $row['userid']; ?>">Edit</a>
-							<a href="delete.php?id=<?php echo $row['userid']; ?>">Delete</a>
+						<td class="col-sm-2 edt-del" style="width: 11.4% !important;">
+							<a class="edit-btn" href="edit.php?id=<?php echo $row['userid']; ?>">Edit</a>
+							<a class="delete-btn" href="delete.php?id=<?php echo $row['userid']; ?>">Delete</a>
 						</td>
 					</tr>
 				<?php

@@ -1,3 +1,13 @@
+@media screen and (max-width: 1199px) {
+    .edt-del{
+        width: 11.4% !important;
+        text-align: -webkit-center;
+        /* display: inline-grid; */
+    }
+}
+
+
+
 @media (min-width: 576px) {
     .container-sm,
     .container {

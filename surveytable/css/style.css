@@ -51,7 +51,6 @@ body {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-
 .container,
 .container-fluid,
 .container-sm,
@@ -80,15 +79,103 @@ body {
     width: 66.66666667%;
 }
 
-th, td {
+th,
+td {
     border-width: 2px !important;
 }
 
-.table_background{
-    background-color: var(--geostat-color);
+th {
+    padding: 7px;
+    text-align: center;
 }
-.form-text-input{
+
+.table_background {
+    background-color: var(--geostat-color);
+    color: #fff;
+}
+.form-text-input {
     display: grid;
 }
 
-.table-active:nth-child(even) {background-color: #ccc;}
+.table-active:nth-child(even) {
+    background-color: #ccc;
+}
+
+.edit-btn {
+    background-color: grey;
+    padding: 5px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.delete-btn {
+    background-color: var(--bs-red);
+    padding: 5px;
+    border: 2px solid var(--bs-red);
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.delete-btn:hover {
+    color: #bfbdbd;
+}
+.edit-btn:hover {
+    color: #bfbdbd;
+}
+
+td {
+    padding: 10px;
+}
+
+/* edit page */
+
+.edit {
+    display: grid;
+}
+
+.btn-edit, .dashboard-btn {
+    background: var(--geostat-color);
+    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+    background-image: -o-linear-gradient(top, #3498db, #2980b9);
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    -webkit-border-radius: 15;
+    -moz-border-radius: 15;
+    border-radius: 15px;
+    font-family: Georgia;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-edit:hover, .dashboard-btn:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+    color: #bfbdbd;
+}
+
+.submit_edit{
+    margin: 3px;
+    border-radius: 15px;
+    -webkit-border-radius: 15;
+    -moz-border-radius: 15;
+    text-decoration: none;
+    border: 1px solid;
+    font-family: Georgia;
+}
+
+.dashboard-btn{
+    border-radius: 0;
+}
+
