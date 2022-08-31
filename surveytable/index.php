@@ -1,5 +1,3 @@
-<!-- loginis shemowmeba -->
-
 <?php
 // if (!isset($_SESSION['login_id']))
 // 	header('location:../login.php');
@@ -17,6 +15,20 @@
 // 	header('Location: ../login.php');
 // 	exit();
 // }
+session_start();
+
+
+if(!isset($_SESSION['isLogin']) || $_SESSION['isLogin'] == false) {
+	
+	if (isset($_SESSION['email'])){
+		header("location:./surveytable/index.php");
+	}else {
+		if (!isset($_SESSION['email'])){
+			header("location:../login.php");
+			exit;
+		}
+	}
+}
 
 ?>
 
