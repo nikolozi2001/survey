@@ -4,6 +4,11 @@
         text-align: -webkit-center;
         /* display: inline-grid; */
     }
+    .edit-btn, .delete-btn{
+        display: inline-flex;
+        width: 60px;
+        justify-content: center;
+    }
 }
 
 
