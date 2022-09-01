@@ -51,7 +51,7 @@ while($row=$answers->fetch_assoc()){
 							<?php foreach(json_decode($row['frm_option']) as $k => $v): 
 								$prog = ((isset($ans[$row['id']][$k]) ? count($ans[$row['id']][$k]) : 0) / $taken) * 100;
 								$prog = round($prog,2);
-								?>
+							?>
 								<li>
 									<div class="d-block w-100">
 										<b><?php echo $v ?></b>

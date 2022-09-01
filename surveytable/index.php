@@ -1,20 +1,5 @@
 <?php
-// if (!isset($_SESSION['login_id']))
-// 	header('location:../login.php');
-// include 'header.php';
-// exit();
-// session_start();
 
-
-// if (isset($_SESSION['login_id']) && $_SESSION['login_id']) {
-//     header("Location: ../login.php"); 
-//     exit();
-// }
-
-// if (!$_SESSION['email']){
-// 	header('Location: ../login.php');
-// 	exit();
-// }
 session_start();
 
 
