@@ -3,12 +3,12 @@
 session_start();
 
 
-if(!isset($_SESSION['isLogin']) || $_SESSION['isLogin'] == false) {
-	
-	if (isset($_SESSION['email'])){
+if (!isset($_SESSION['isLogin']) || $_SESSION['isLogin'] == false) {
+
+	if (isset($_SESSION['email'])) {
 		header("location:./surveytable/index.php");
-	}else {
-		if (!isset($_SESSION['email'])){
+	} else {
+		if (!isset($_SESSION['email'])) {
 			header("location:../login.php");
 			exit;
 		}

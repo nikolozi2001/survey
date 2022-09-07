@@ -65,6 +65,7 @@ body {
 }
 
 .table-responsive {
+    margin-bottom: 20px;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
 }
@@ -136,7 +137,8 @@ td {
     display: grid;
 }
 
-.btn-edit, .dashboard-btn {
+.btn-edit,
+.dashboard-btn {
     background: var(--geostat-color);
     background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
     background-image: -moz-linear-gradient(top, #3498db, #2980b9);
@@ -154,7 +156,8 @@ td {
     text-align: center;
 }
 
-.btn-edit:hover, .dashboard-btn:hover {
+.btn-edit:hover,
+.dashboard-btn:hover {
     background: #3cb0fd;
     background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
     background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
@@ -165,7 +168,7 @@ td {
     color: #bfbdbd;
 }
 
-.submit_edit{
+.submit_edit {
     margin: 3px;
     border-radius: 15px;
     -webkit-border-radius: 15;
@@ -175,7 +178,6 @@ td {
     font-family: Georgia;
 }
 
-.dashboard-btn{
+.dashboard-btn {
     border-radius: 0;
 }
-
