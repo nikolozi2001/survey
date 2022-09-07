@@ -64,6 +64,11 @@ if(!isset($_SESSION['isLogin']) || $_SESSION['isLogin'] == false) {
 				<th colspan="5"></th>
 			</thead>
 			<thead class="table_background">
+				<th colspan="2"></th>
+				<th colspan="3">ადგილობრივი ბაზრისთვის წარმოებული პროდუქციის ფასი(ლარი)</th>
+				<th colspan="5"></th>
+			</thead>
+			<thead class="table_background">
 				<th>პროდუქტის სახეობა</th>
 				<th>ზომის ერთეული</th>
 				<th>საბაზრო თვე</th>
