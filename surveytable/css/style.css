@@ -181,3 +181,8 @@ td {
 .dashboard-btn {
     border-radius: 0;
 }
+
+.center {
+    justify-content: center !important;
+    align-items: center !important;
+}

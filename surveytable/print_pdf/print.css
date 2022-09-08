@@ -1,0 +1,19 @@
+:root{
+  --geostat-color: #0080be;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+@page {
+  size: A4;
+  margin: 0;
+}
+#print-btn {
+  display: none;
+  visibility: none;
+}
+

@@ -101,6 +101,9 @@ if (!isset($_SESSION['isLogin']) || $_SESSION['isLogin'] == false) {
 			</tbody>
 		</table>
 	</div>
+	<div class="container center">
+		<a class="btn btn-primary" target="_blank" href="print_pdf/products_data_print.php">Print</a>
+	</div>
 	<script src="js/script.js"></script>
 	<script src="js/bootstrap.js"></script>
 </body>
