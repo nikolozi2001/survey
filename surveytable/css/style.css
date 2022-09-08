@@ -65,7 +65,6 @@ body {
 }
 
 .table-responsive {
-    margin-bottom: 20px;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
 }
@@ -95,7 +94,7 @@ th {
     color: #fff;
 }
 .form-text-input {
-    display: grid;
+    display: inline-table;
 }
 
 .table-active:nth-child(even) {
@@ -134,7 +133,7 @@ td {
 /* edit page */
 
 .edit {
-    display: grid;
+    display: contents;
 }
 
 .btn-edit,
