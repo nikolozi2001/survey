@@ -51,6 +51,9 @@ if (!isset($_SESSION['isLogin']) || $_SESSION['isLogin'] == false) {
 		</form>
 	</div>
 	<br>
+	<div class="container right">
+		<a class="btn btn-primary" target="_blank" href="print_pdf/products_data_print.php">Print</a>
+	</div>
 	<div class="container">
 		<table border="1" class="table-responsive">
 			<thead class="table_background">
@@ -66,7 +69,7 @@ if (!isset($_SESSION['isLogin']) || $_SESSION['isLogin'] == false) {
 			<thead class="table_background">
 				<th colspan="2"></th>
 				<th colspan="3">ადგილობრივი ბაზრისთვის წარმოებული პროდუქციის ფასი(ლარი)</th>
-				<th colspan="5"></th>
+				<th colspan="2"></th>
 			</thead>
 			<thead class="table_background">
 				<th>პროდუქტის სახეობა</th>
@@ -100,9 +103,6 @@ if (!isset($_SESSION['isLogin']) || $_SESSION['isLogin'] == false) {
 				?>
 			</tbody>
 		</table>
-	</div>
-	<div class="container center">
-		<a class="btn btn-primary" target="_blank" href="print_pdf/products_data_print.php">Print</a>
 	</div>
 	<script src="js/script.js"></script>
 	<script src="js/bootstrap.js"></script>

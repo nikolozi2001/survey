@@ -186,3 +186,7 @@ td {
     justify-content: center !important;
     align-items: center !important;
 }
+
+.right{
+    justify-content: right;
+}
