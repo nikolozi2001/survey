@@ -94,7 +94,8 @@ th {
     color: #fff;
 }
 .form-text-input {
-    display: inline-table;
+    display: flex;
+    flex-direction: column;
 }
 
 .table-active:nth-child(even) {

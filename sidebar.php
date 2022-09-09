@@ -85,6 +85,14 @@
                 </p>
               </a>
             </li>
+            <li class="nav-item">
+              <a href="./kitxvari/index.php" class="nav-link">
+                <i class="nav-icon fas fa-solid fa-table"></i>
+                <p>
+                  kitxvari
+                </p>
+              </a>
+            </li>
           <?php else : ?>
             <li class="nav-item">
               <a href="./index.php?page=survey_widget" class="nav-link nav-survey_widget nav-answer_survey">

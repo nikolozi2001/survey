@@ -70,7 +70,7 @@ if (!isset($_SESSION['isLogin']) || $_SESSION['isLogin'] == false) {
 				<tbody>
 					<?php
 					include('conn.php');
-					$query = mysqli_query($conn, "select * from `products`");
+					$query = mysqli_query($conn, "select * from `products` limit 4");
 					while ($row = mysqli_fetch_array($query)) {
 					?>
 						<tr class="table-active">
@@ -102,10 +102,10 @@ if (!isset($_SESSION['isLogin']) || $_SESSION['isLogin'] == false) {
 		</div>
 	</div>
 	<div class="container-fluid right">
-			<button type="button" id="toggleBtn" class="btn btn-secondary">თეიბლის გამოჩენა</button>
+			<button id="my-btn">თეიბლის გამოჩენა</button>
 			<a class="btn btn-primary" target="_blank" href="print_pdf/products_data_print.php">Print</a>
 		</div>
-	<div class="second-table">
+	<div class="second-table" id="table-second">
 		<div class="container-fluid">
 			<table border="1" class="table-responsive">
 				<thead class="table_background">
@@ -135,32 +135,32 @@ if (!isset($_SESSION['isLogin']) || $_SESSION['isLogin'] == false) {
 				<tbody>
 					<?php
 					include('conn.php');
-					$query = mysqli_query($conn, "select * from `products`");
+					$query = mysqli_query($conn, "select * from `productss` limit 4");
 					while ($row = mysqli_fetch_array($query)) {
 					?>
 						<tr class="table-active">
-							<td><?php echo $row['saxeoba']; ?></td>
-							<td><?php echo $row['erteuli']; ?></td>
-							<td><?php echo $row['sabazrotve']; ?></td>
-							<td><?php echo $row['winatve']; ?></td>
-							<td><?php echo $row['mimdinaretve']; ?></td>
-							<td><?php echo $row['komentari']; ?></td>
+							<td><?php echo $row['saxeobaa']; ?></td>
+							<td><?php echo $row['erteulii']; ?></td>
+							<td><?php echo $row['sabazrotvee']; ?></td>
+							<td><?php echo $row['winatvee']; ?></td>
+							<td><?php echo $row['mimdinaretvee']; ?></td>
+							<td><?php echo $row['komentarii']; ?></td>
 							<td class="col-sm-2 edt-del" style="width: 11.4% !important;">
-								<a class="edit-btn" href="edit.php?id=<?php echo $row['userid']; ?>">Edit</a>
-								<a class="delete-btn" href="delete.php?id=<?php echo $row['userid']; ?>">Delete</a>
+								<a class="edit-btn" href="editt.php?id=<?php echo $row['useridd']; ?>">Edit</a>
+								<a class="delete-btn" href="delete.php?id=<?php echo $row['useridd']; ?>">Delete</a>
 							</td>
 						</tr>
 					<?php
 					}
 					?>
 					<form method="POST" action="add.php" class="form-text-input">
-						<th><input class="p-2 flex-fill" type="text" name="saxeoba" placeholder="სახეობა"></th>
-						<th><input class="p-2 flex-fill" type="text" name="erteuli" placeholder="ერთეული"></th>
-						<th><input class="p-2 flex-fill" type="text" name="sabazrotve" placeholder="საბაზრო თვე"></th>
-						<th><input class="p-2 flex-fill" type="text" name="winatve" placeholder="წინა თვე"></th>
-						<th><input class="p-2 flex-fill" type="text" name="mimdinaretve" placeholder="მიმდინარე თვე"></th>
-						<th><input class="p-2 flex-fill" type="text" name="komentari" placeholder="კომენტარი"></th>
-						<th><input class="p-2 flex-fill" type="submit" name="add"></th>
+						<th><input class="p-2 flex-fill" type="text" name="saxeobaa" placeholder="სახეობა"></th>
+						<th><input class="p-2 flex-fill" type="text" name="erteulii" placeholder="ერთეული"></th>
+						<th><input class="p-2 flex-fill" type="text" name="sabazrotvee" placeholder="საბაზრო თვე"></th>
+						<th><input class="p-2 flex-fill" type="text" name="winatvee" placeholder="წინა თვე"></th>
+						<th><input class="p-2 flex-fill" type="text" name="mimdinaretvee" placeholder="მიმდინარე თვე"></th>
+						<th><input class="p-2 flex-fill" type="text" name="komentarii" placeholder="კომენტარი"></th>
+						<th><input class="p-2 flex-fill" type="submit" name="addd"></th>
 					</form>
 				</tbody>
 			</table>
