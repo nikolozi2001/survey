@@ -93,6 +93,8 @@ th {
     background-color: var(--geostat-color);
     color: #fff;
 }
+
+
 .form-text-input {
     display: flex;
     flex-direction: column;

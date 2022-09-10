@@ -29,14 +29,31 @@ if (!isset($_SESSION['isLogin']) || $_SESSION['isLogin'] == false) {
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <title>Geostat-Table</title>
+    <title>Geostat-kitxvari</title>
 </head>
 
 <body>
-    <div class="first-table">
+    <header>
         <div class="dashboard container-fluid">
             <a class="dashboard-btn p-2 flex-fill" href="../index.php" target="" rel="noopener noreferrer">მთავარი გვერდი</a>
         </div>
+    </header>
+    <div class="container-fluid input-form">
+        <form method="POST" action="add.php" class="form-text-input">
+            <label>საიდენტიფიკაცო კოდი</label><input class="p-2 flex-fill" type="text" name="saxeoba" placeholder="საიდენტიფიკაციო კოდი">
+            <label>საწარმოს დასახელება</label><input class="p-2 flex-fill" type="text" name="erteuli" placeholder="საწარმოს დასახელება">
+            <label>იურიდიული მისამართი</label><input class="p-2 flex-fill" type="text" name="sabazrotve" placeholder="იურიდიული მისამართი">
+            <label>ფაქტიური მისამართი</label><input class="p-2 flex-fill" type="text" name="winatve" placeholder="ფაქტიური მისამართი">
+            <label>რეგიონი</label><input class="p-2 flex-fill" type="text" name="mimdinaretve" placeholder="რეგიონი">
+            <label>რაიონი</label><input class="p-2 flex-fill" type="text" name="komentari" placeholder="რაიონი">
+            <label>ორგანიზაციულ-სამართლებრივი ფორმა</label><input class="p-2 flex-fill" type="text" name="komentari" placeholder="ორგანიზაციულ-სამართლებრივი ფორმა">
+            <label>ეკონომიკური საქმიანობის ძირითადი სახე</label><input class="p-2 flex-fill" type="text" name="komentari" placeholder="ეკონომიკური საქმიანობის ძირითადი სახე">
+            <label>საწარმოს ხელმძღვანელის სახელი და გვარი</label><input class="p-2 flex-fill" type="text" name="komentari" placeholder="საწარმოს ხელმძღვანელის სახელი და გვარი">
+            <label>ტელეფონი</label><input class="p-2 flex-fill" type="text" name="komentari" placeholder="ტელეფონი">
+            <input class="p-2 flex-fill" type="submit" name="add">
+        </form>
+    </div>
+    <div class="first-table">
         <br>
         <div class="container-fluid right">
             <a class="btn btn-primary" target="_blank" href="print_pdf/products_data_print.php">Print</a>
@@ -92,18 +109,7 @@ if (!isset($_SESSION['isLogin']) || $_SESSION['isLogin'] == false) {
                 </tbody>
             </table>
         </div>
-        <div class="container-fluid input-form">
-            <form method="POST" action="add.php" class="form-text-input">
-                <label for="saxeoba">საიდენტიფიკაცო კოდი</label>
-                <th><input class="p-2 flex-fill" type="text" name="saxeoba" placeholder="სახეობა"></th>
-                <th><input class="p-2 flex-fill" type="text" name="erteuli" placeholder="ერთეული"></th>
-                <th><input class="p-2 flex-fill" type="text" name="sabazrotve" placeholder="საბაზრო თვე"></th>
-                <th><input class="p-2 flex-fill" type="text" name="winatve" placeholder="წინა თვე"></th>
-                <th><input class="p-2 flex-fill" type="text" name="mimdinaretve" placeholder="მიმდინარე თვე"></th>
-                <th><input class="p-2 flex-fill" type="text" name="komentari" placeholder="კომენტარი"></th>
-                <th><input class="p-2 flex-fill" type="submit" name="add"></th>
-            </form>
-        </div>
+
         <script src="js/script.js"></script>
         <script src="js/bootstrap.js"></script>
 </body>
