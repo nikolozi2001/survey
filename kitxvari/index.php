@@ -29,44 +29,41 @@ if (!isset($_SESSION['isLogin']) || $_SESSION['isLogin'] == false) {
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <title>Geostat-kitxvari</title>
+    <title>Geostat-Kitxvari</title>
 </head>
 
 <body>
-    <header>
+    <header class="container-fluid">
         <div class="dashboard container-fluid">
             <a class="dashboard-btn p-2 flex-fill" href="../index.php" target="" rel="noopener noreferrer">მთავარი გვერდი</a>
         </div>
     </header>
-    <div class="container-fluid input-form">
-        <form method="POST" action="add.php" class="form-text-input">
-            
-            <label>საიდენტიფიკაცო კოდი</label><input class="p-2 flex-fill" type="text" name="kodi" placeholder="საიდენტიფიკაციო კოდი">
-            <label>საწარმოს დასახელება</label><input class="p-2 flex-fill" type="text" name="dasaxeleba" placeholder="საწარმოს დასახელება">
-            <label>იურიდიული მისამართი</label><input class="p-2 flex-fill" type="text" name="imisamarti" placeholder="იურიდიული მისამართი">
-            <label>ფაქტიური მისამართი</label><input class="p-2 flex-fill" type="text" name="fmisamarti" placeholder="ფაქტიური მისამართი">
-            <label>რეგიონი</label><input class="p-2 flex-fill" type="text" name="regioni" placeholder="რეგიონი">
-            <label>რაიონი</label><input class="p-2 flex-fill" type="text" name="raioni" placeholder="რაიონი">
-            <label>საკუთრების ფორმა</label><input class="p-2 flex-fill" type="text" name="sforma" placeholder="საკუთრების ფორმა">
-            <label>ორგანიზაციულ-სამართლებრივი ფორმა</label><input class="p-2 flex-fill" type="text" name="osforma" placeholder="ორგანიზაციულ-სამართლებრივი ფორმა">
-            <label>ეკონომიკური საქმიანობის ძირითადი სახე</label><input class="p-2 flex-fill" type="text" name="saxe" placeholder="ეკონომიკური საქმიანობის ძირითადი სახე">
-            <label>საწარმოს ხელმძღვანელის სახელი და გვარი</label><input class="p-2 flex-fill" type="text" name="gvari" placeholder="საწარმოს ხელმძღვანელის სახელი და გვარი">
-            <label>ტელეფონი</label><input class="p-2 flex-fill" type="text" name="phone" placeholder="ტელეფონი">
-            <input class="p-2 flex-fill" type="submit" name="add">
-        </form>
-    </div>
-    <div class="first-table">
+    <div class="first-table container-fluid">
         <br>
-        <div class="container-fluid right">
-            <a class="btn btn-primary" target="_blank" href="print_pdf/products_data_print.php">Print</a>
-        </div>
+        <!-- <div class="container-fluid right">
+            <a class="btn btn-primary" target="_blank" href="print_pdf/sawarmo_data_print.php">Print</a>
+        </div> -->
         <div class="container-fluid">
             <table border="1" class="table-responsive">
 
+                <thead class="table_background">
+                    <th>საიდენტიფიკაციო კოდი
+                    <th>საწარმოს დასახელება
+                    <th>იურიდიული მისამართი
+                    <th>ფაქტიური მისამართი
+                    <th>რეგიონი
+                    <th>რაიონი
+                    <th>საკუთრების ფორმა
+                    <th>ორგანიზაციულ-სამართლებრივი ფორმა
+                    <th>ეკონომიკური საქმიანობის ძირითადი სახე
+                    <th>საწარმოს ხელმძღვანელის სახელი და გვარი
+                    <th>ტელეფონი
+                    <th>
+                </thead>
                 <tbody>
                     <?php
                     include('conn.php');
-                    $query = mysqli_query($conn, "select * from `sawarmo` limit 4");
+                    $query = mysqli_query($conn, "select * from `sawarmo`");
                     while ($row = mysqli_fetch_array($query)) {
                     ?>
                         <tr class="table-active">
@@ -81,15 +78,29 @@ if (!isset($_SESSION['isLogin']) || $_SESSION['isLogin'] == false) {
                             <td><?php echo $row['saxe']; ?></td>
                             <td><?php echo $row['gvari']; ?></td>
                             <td><?php echo $row['phone']; ?></td>
-                            <td class="col-sm-2 edt-del" style="width: 11.4% !important;">
+                            <td class="col-sm-2 edt-del" style="width: 3% !important;">
                                 <a class="edit-btn" href="edit.php?id=<?php echo $row['userid']; ?>">Edit</a>
-                                <a class="delete-btn" href="delete.php?id=<?php echo $row['userid']; ?>">Delete</a>
+
                             </td>
                         </tr>
                     <?php
                     }
                     ?>
+                    <form method="POST" action="add.php" class="form-text-input">
 
+                        <th><input class="p-2 flex-fill" type="text" name="kodi" placeholder="საიდენტიფიკაციო კოდი"></th>
+                        <th><input class="p-2 flex-fill" type="text" name="dasaxeleba" placeholder="საწარმოს დასახელება"></th>
+                        <th><input class="p-2 flex-fill" type="text" name="imisamarti" placeholder="იურიდიული მისამართი"></th>
+                        <th><input class="p-2 flex-fill" type="text" name="fmisamarti" placeholder="ფაქტიური მისამართი"></th>
+                        <th><input class="p-2 flex-fill" type="text" name="regioni" placeholder="რეგიონი"></th>
+                        <th><input class="p-2 flex-fill" type="text" name="raioni" placeholder="რაიონი"></th>
+                        <th><input class="p-2 flex-fill" type="text" name="sforma" placeholder="საკუთრების ფორმა"></th>
+                        <th><input class="p-2 flex-fill" type="text" name="osforma" placeholder="ორგანიზაციულ-სამართლებრივი ფორმა"></th>
+                        <th><input class="p-2 flex-fill" type="text" name="saxe" placeholder="ეკონომიკური საქმიანობის ძირითადი სახე"></th>
+                        <th><input class="p-2 flex-fill" type="text" name="gvari" placeholder="საწარმოს ხელმძღვანელის სახელი და გვარი"></th>
+                        <th><input class="p-2 flex-fill" type="text" name="phone" placeholder="ტელეფონი"></th>
+                        <th><input class="p-2 flex-fill" type="submit" name="add"></th>
+                    </form>
                 </tbody>
             </table>
         </div>

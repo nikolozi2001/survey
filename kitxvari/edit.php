@@ -20,19 +20,19 @@ $row = mysqli_fetch_array($query);
 
 <body>
 	<h2 class="edit-title container-fluid">Edit</h2>
-	<div class="container-fluid">
+	<div class="container-fluid grid">
 		<form class="edit" method="POST" action="update.php?id=<?php echo $id; ?>">
-			<input class="kodi_edit p-2 flex-fill" type="text" value="<?php echo $row['kodi']; ?>" name="kodi" placeholder="საიდენტიფიკაციო კოდი">
-			<input class="dasaxeleba_edit p-2 flex-fill" type="text" value="<?php echo $row['dasaxeleba']; ?>" name="dasaxeleba" placeholder="საწარმოს დასახელება">
-			<input class="imisamarti_edit p-2 flex-fill" type="text" value="<?php echo $row['imisamarti']; ?>" name="imisamarti" placeholder="იურიდიული მისამართი">
-			<input class="fmisamarti_edit p-2 flex-fill" type="text" value="<?php echo $row['fmisamarti']; ?>" name="fmisamarti" placeholder="ფიზიკური მისამართი">
-			<input class="regioni_edit p-2 flex-fill" type="text" value="<?php echo $row['regioni']; ?>" name="regioni" placeholder="რეგიონი">
-			<input class="raioni_edit p-2 flex-fill" type="text" value="<?php echo $row['raioni']; ?>" name="raioni" placeholder="რაიონი">
-			<input class="sforma_edit p-2 flex-fill" type="text" value="<?php echo $row['sforma']; ?>" name="sforma" placeholder="საკუთრების ფორმა">
-			<input class="osforma_edit p-2 flex-fill" type="text" value="<?php echo $row['osforma']; ?>" name="osforma" placeholder="ორგანიზაციულ-სამართლებრივი ფორმა">
-			<input class="saxe_edit p-2 flex-fill" type="text" value="<?php echo $row['saxe']; ?>" name="saxe" placeholder="ეკონომიკური საქმიანობის ძირითადი სახე">
-			<input class="gvari_edit p-2 flex-fill" type="text" value="<?php echo $row['gvari']; ?>" name="gvari" placeholder="საწარმოს ხელმძღვანელის სახელი და გვარი">
-			<input class="phone_edit p-2 flex-fill" type="text" value="<?php echo $row['phone']; ?>" name="phone" placeholder="ტელეფონი">
+			<label>საიდენტიფიკაცო კოდი</label><input class="kodi_edit p-2 flex-fill" type="text" value="<?php echo $row['kodi']; ?>" name="kodi" placeholder="საიდენტიფიკაციო კოდი">
+			<label>საწარმოს დასახელება</label><input class="dasaxeleba_edit p-2 flex-fill" type="text" value="<?php echo $row['dasaxeleba']; ?>" name="dasaxeleba" placeholder="საწარმოს დასახელება">
+			<label>იურიდიული მისამართი</label><input class="imisamarti_edit p-2 flex-fill" type="text" value="<?php echo $row['imisamarti']; ?>" name="imisamarti" placeholder="იურიდიული მისამართი">
+			<label>ფაქტიური მისამართი</label><input class="fmisamarti_edit p-2 flex-fill" type="text" value="<?php echo $row['fmisamarti']; ?>" name="fmisamarti" placeholder="ფიზიკური მისამართი">
+			<label>რეგიონი</label><input class="regioni_edit p-2 flex-fill" type="text" value="<?php echo $row['regioni']; ?>" name="regioni" placeholder="რეგიონი">
+			<label>რაიონი</label><input class="raioni_edit p-2 flex-fill" type="text" value="<?php echo $row['raioni']; ?>" name="raioni" placeholder="რაიონი">
+			<label>საკუთრების ფორმა</label><input class="sforma_edit p-2 flex-fill" type="text" value="<?php echo $row['sforma']; ?>" name="sforma" placeholder="საკუთრების ფორმა">
+			<label>ორგანიზაციულ-სამართლებრივი ფორმა</label><input class="osforma_edit p-2 flex-fill" type="text" value="<?php echo $row['osforma']; ?>" name="osforma" placeholder="ორგანიზაციულ-სამართლებრივი ფორმა">
+			<label>ეკონომიკური საქმიანობის ძირითადი სახე</label><input class="saxe_edit p-2 flex-fill" type="text" value="<?php echo $row['saxe']; ?>" name="saxe" placeholder="ეკონომიკური საქმიანობის ძირითადი სახე">
+			<label>საწარმოს ხელმძღვანელის სახელი და გვარი</label><input class="gvari_edit p-2 flex-fill" type="text" value="<?php echo $row['gvari']; ?>" name="gvari" placeholder="საწარმოს ხელმძღვანელის სახელი და გვარი">
+			<label>ტელეფონი</label><input class="phone_edit p-2 flex-fill" type="text" value="<?php echo $row['phone']; ?>" name="phone" placeholder="ტელეფონი">
 			<input class="submit_edit p-2 flex-fill" type="submit" name="submit">
 			<a class="btn-edit" href="index.php">Back</a>
 		</form>

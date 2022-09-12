@@ -113,6 +113,10 @@ th {
     color: white;
 }
 
+.edt-del{
+    text-align: center;
+}
+
 .delete-btn {
     background-color: var(--bs-red);
     padding: 5px;
@@ -195,4 +199,7 @@ td {
 
 .second-table {
     display: none;
+}
+.grid{
+    display: grid;
 }
