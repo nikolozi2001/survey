@@ -186,10 +186,16 @@ td {
     align-items: center !important;
 }
 
-.right{
+.right {
     justify-content: right;
 }
 
 .second-table {
     display: none;
 }
+.print {
+    margin-left: -453px;
+    justify-content: right;
+}
+
+

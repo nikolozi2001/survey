@@ -21,12 +21,12 @@
 							<input type="text" name="lastname" class="form-control form-control-sm" required value="<?php echo isset($lastname) ? $lastname : '' ?>">
 						</div>
 						<div class="form-group">
-							<label for="" class="control-label">Contact No.</label>
+							<label for="" class="control-label">Personal Number</label>
 							<input type="text" name="contact" class="form-control form-control-sm" required value="<?php echo isset($contact) ? $contact : '' ?>">
 						</div>
 						<div class="form-group">
 							<label class="control-label">Address</label>
-							<textarea name="address" id="" cols="30" rows="4" class="form-control" required><?php echo isset($address) ? $address : '' ?></textarea>
+							<textarea name="address" id="" cols="30" rows="4" class="form-control" ><?php echo isset($address) ? $address : '' ?></textarea>
 						</div>
 					</div>
 					<div class="col-md-6">

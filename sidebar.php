@@ -46,7 +46,7 @@
                 </li>
               </ul>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" style="display: none;">
               <a href="#" class="nav-link nav-is-tree nav-edit_survey nav-view_survey">
                 <i class="nav-icon fa fa-poll-h"></i>
                 <p>
@@ -69,7 +69,7 @@
                 </li>
               </ul>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" style="display: none;">
               <a href="./index.php?page=survey_report" class="nav-link nav-survey_report">
                 <i class="nav-icon fas fa-poll"></i>
                 <p>
@@ -89,7 +89,7 @@
               <a href="./kitxvari/index.php" class="nav-link">
                 <i class="nav-icon fas fa-solid fa-table"></i>
                 <p>
-                  kitxvari
+                  Kitxvari
                 </p>
               </a>
             </li>
