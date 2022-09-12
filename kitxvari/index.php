@@ -40,16 +40,18 @@ if (!isset($_SESSION['isLogin']) || $_SESSION['isLogin'] == false) {
     </header>
     <div class="container-fluid input-form">
         <form method="POST" action="add.php" class="form-text-input">
-            <label>საიდენტიფიკაცო კოდი</label><input class="p-2 flex-fill" type="text" name="saxeoba" placeholder="საიდენტიფიკაციო კოდი">
-            <label>საწარმოს დასახელება</label><input class="p-2 flex-fill" type="text" name="erteuli" placeholder="საწარმოს დასახელება">
-            <label>იურიდიული მისამართი</label><input class="p-2 flex-fill" type="text" name="sabazrotve" placeholder="იურიდიული მისამართი">
-            <label>ფაქტიური მისამართი</label><input class="p-2 flex-fill" type="text" name="winatve" placeholder="ფაქტიური მისამართი">
-            <label>რეგიონი</label><input class="p-2 flex-fill" type="text" name="mimdinaretve" placeholder="რეგიონი">
-            <label>რაიონი</label><input class="p-2 flex-fill" type="text" name="komentari" placeholder="რაიონი">
-            <label>ორგანიზაციულ-სამართლებრივი ფორმა</label><input class="p-2 flex-fill" type="text" name="komentari" placeholder="ორგანიზაციულ-სამართლებრივი ფორმა">
-            <label>ეკონომიკური საქმიანობის ძირითადი სახე</label><input class="p-2 flex-fill" type="text" name="komentari" placeholder="ეკონომიკური საქმიანობის ძირითადი სახე">
-            <label>საწარმოს ხელმძღვანელის სახელი და გვარი</label><input class="p-2 flex-fill" type="text" name="komentari" placeholder="საწარმოს ხელმძღვანელის სახელი და გვარი">
-            <label>ტელეფონი</label><input class="p-2 flex-fill" type="text" name="komentari" placeholder="ტელეფონი">
+            
+            <label>საიდენტიფიკაცო კოდი</label><input class="p-2 flex-fill" type="text" name="kodi" placeholder="საიდენტიფიკაციო კოდი">
+            <label>საწარმოს დასახელება</label><input class="p-2 flex-fill" type="text" name="dasaxeleba" placeholder="საწარმოს დასახელება">
+            <label>იურიდიული მისამართი</label><input class="p-2 flex-fill" type="text" name="imisamarti" placeholder="იურიდიული მისამართი">
+            <label>ფაქტიური მისამართი</label><input class="p-2 flex-fill" type="text" name="fmisamarti" placeholder="ფაქტიური მისამართი">
+            <label>რეგიონი</label><input class="p-2 flex-fill" type="text" name="regioni" placeholder="რეგიონი">
+            <label>რაიონი</label><input class="p-2 flex-fill" type="text" name="raioni" placeholder="რაიონი">
+            <label>საკუთრების ფორმა</label><input class="p-2 flex-fill" type="text" name="sforma" placeholder="საკუთრების ფორმა">
+            <label>ორგანიზაციულ-სამართლებრივი ფორმა</label><input class="p-2 flex-fill" type="text" name="osforma" placeholder="ორგანიზაციულ-სამართლებრივი ფორმა">
+            <label>ეკონომიკური საქმიანობის ძირითადი სახე</label><input class="p-2 flex-fill" type="text" name="saxe" placeholder="ეკონომიკური საქმიანობის ძირითადი სახე">
+            <label>საწარმოს ხელმძღვანელის სახელი და გვარი</label><input class="p-2 flex-fill" type="text" name="gvari" placeholder="საწარმოს ხელმძღვანელის სახელი და გვარი">
+            <label>ტელეფონი</label><input class="p-2 flex-fill" type="text" name="phone" placeholder="ტელეფონი">
             <input class="p-2 flex-fill" type="submit" name="add">
         </form>
     </div>
@@ -60,30 +62,7 @@ if (!isset($_SESSION['isLogin']) || $_SESSION['isLogin'] == false) {
         </div>
         <div class="container-fluid">
             <table border="1" class="table-responsive">
-                <!-- <thead class="table_background">
-					<th colspan="1">#</th>
-					<th colspan="1">CPA კოდი</th>
-					<th colspan="5">პროდუქტის დასახელება</th>
-				</thead>
-				<thead class="table_background">
-					<th colspan="1">1</th>
-					<th colspan="1"></th>
-					<th colspan="5"></th>
-				</thead>
-				<thead class="table_background">
-					<th colspan="2"></th>
-					<th colspan="3">ადგილობრივი ბაზრისთვის წარმოებული პროდუქციის ფასი(ლარი)</th>
-					<th colspan="2"></th>
-				</thead>
-				<thead class="table_background">
-					<th>პროდუქტის სახეობა</th>
-					<th>ზომის ერთეული</th>
-					<th>საბაზრო თვე</th>
-					<th>წინა თვე</th>
-					<th>მიმდინარე თვე</th>
-					<th>კომენტარი</th>
-					<th></th>
-				</thead> -->
+
                 <tbody>
                     <?php
                     include('conn.php');
@@ -91,12 +70,17 @@ if (!isset($_SESSION['isLogin']) || $_SESSION['isLogin'] == false) {
                     while ($row = mysqli_fetch_array($query)) {
                     ?>
                         <tr class="table-active">
-                            <td><?php echo $row['saxeoba']; ?></td>
-                            <td><?php echo $row['erteuli']; ?></td>
-                            <td><?php echo $row['sabazrotve']; ?></td>
-                            <td><?php echo $row['winatve']; ?></td>
-                            <td><?php echo $row['mimdinaretve']; ?></td>
-                            <td><?php echo $row['komentari']; ?></td>
+                            <td><?php echo $row['kodi']; ?></td>
+                            <td><?php echo $row['dasaxeleba']; ?></td>
+                            <td><?php echo $row['imisamarti']; ?></td>
+                            <td><?php echo $row['fmisamarti']; ?></td>
+                            <td><?php echo $row['regioni']; ?></td>
+                            <td><?php echo $row['raioni']; ?></td>
+                            <td><?php echo $row['sforma']; ?></td>
+                            <td><?php echo $row['osforma']; ?></td>
+                            <td><?php echo $row['saxe']; ?></td>
+                            <td><?php echo $row['gvari']; ?></td>
+                            <td><?php echo $row['phone']; ?></td>
                             <td class="col-sm-2 edt-del" style="width: 11.4% !important;">
                                 <a class="edit-btn" href="edit.php?id=<?php echo $row['userid']; ?>">Edit</a>
                                 <a class="delete-btn" href="delete.php?id=<?php echo $row['userid']; ?>">Delete</a>

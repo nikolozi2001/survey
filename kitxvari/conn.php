@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost","root","","surveytable");
+$conn = mysqli_connect("localhost","root","","kitxvari");
 
 // Check connection
 if (mysqli_connect_errno())

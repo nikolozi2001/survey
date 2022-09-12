@@ -2,13 +2,18 @@
 	include('conn.php');
 	$id=$_GET['id'];
 	
-	$saxeoba=$_POST['saxeoba'];
-	$erteuli=$_POST['erteuli'];
-	$sabazrotve=$_POST['sabazrotve'];
-	$winatve=$_POST['winatve'];
-	$mimdinaretve=$_POST['mimdinaretve'];
-	$komentari=$_POST['komentari'];
+	$kodi=$_POST['kodi'];
+	$dasaxeleba=$_POST['dasaxeleba'];
+	$imisamarti=$_POST['imisamarti'];
+	$fmisamarti=$_POST['fmisamarti'];
+	$regioni=$_POST['regioni'];
+	$raioni=$_POST['raioni'];
+	$sforma=$_POST['sforma'];
+	$osforma=$_POST['osforma'];
+	$saxe=$_POST['saxe'];
+	$gvari=$_POST['gvari'];
+	$phone=$_POST['phone'];
 	
-	mysqli_query($conn,"update `products` set saxeoba='$saxeoba', erteuli='$erteuli', sabazrotve='$sabazrotve', winatve='$winatve', mimdinaretve='$mimdinaretve', komentari='$komentari' where userid='$id'");
+	mysqli_query($conn,"update `kitxvari` set kodi='$kodi', dasaxeleba='$dasaxeleba', imisamarti='$imisamarti', fmisamarti='$fmisamarti', regioni='$regioni', raioni='$raioni', sforma='$sforma', osforma='$osforma', saxe='$saxe', gvari='$gvari', phone='$phone'  where userid='$id'");
 	header('location:index.php');
 ?>
