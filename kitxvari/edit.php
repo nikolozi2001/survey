@@ -1,7 +1,7 @@
 <?php
 include('conn.php');
 $id = $_GET['id'];
-$query = mysqli_query($conn, "select * from `products` where userid='$id'");
+$query = mysqli_query($conn, "select * from `sawarmo` where userid='$id'");
 $row = mysqli_fetch_array($query);
 ?>
 <!DOCTYPE html>
@@ -15,7 +15,7 @@ $row = mysqli_fetch_array($query);
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/responsive.css">
-	<title>Geostat-Table</title>
+	<title>Geostat-Kitxvari</title>
 </head>
 
 <body>

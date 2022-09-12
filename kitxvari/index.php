@@ -6,7 +6,7 @@ session_start();
 if (!isset($_SESSION['isLogin']) || $_SESSION['isLogin'] == false) {
 
     if (isset($_SESSION['email'])) {
-        header("location:./surveytable/index.php");
+        header("location:./kitxvari/index.php");
     } else {
         if (!isset($_SESSION['email'])) {
             header("location:../login.php");
@@ -66,7 +66,7 @@ if (!isset($_SESSION['isLogin']) || $_SESSION['isLogin'] == false) {
                 <tbody>
                     <?php
                     include('conn.php');
-                    $query = mysqli_query($conn, "select * from `products` limit 4");
+                    $query = mysqli_query($conn, "select * from `sawarmo` limit 4");
                     while ($row = mysqli_fetch_array($query)) {
                     ?>
                         <tr class="table-active">

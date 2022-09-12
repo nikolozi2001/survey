@@ -14,6 +14,6 @@
 	$gvari=$_POST['gvari'];
 	$phone=$_POST['phone'];
 	
-	mysqli_query($conn,"update `kitxvari` set kodi='$kodi', dasaxeleba='$dasaxeleba', imisamarti='$imisamarti', fmisamarti='$fmisamarti', regioni='$regioni', raioni='$raioni', sforma='$sforma', osforma='$osforma', saxe='$saxe', gvari='$gvari', phone='$phone'  where userid='$id'");
+	mysqli_query($conn,"update `sawarmo` set kodi='$kodi', dasaxeleba='$dasaxeleba', imisamarti='$imisamarti', fmisamarti='$fmisamarti', regioni='$regioni', raioni='$raioni', sforma='$sforma', osforma='$osforma', saxe='$saxe', gvari='$gvari', phone='$phone'  where userid='$id'");
 	header('location:index.php');
 ?>

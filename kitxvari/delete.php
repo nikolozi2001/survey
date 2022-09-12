@@ -1,6 +1,6 @@
 <?php
 	$id=$_GET['id'];
 	include('conn.php');
-	mysqli_query($conn,"delete from `kitxvari` where userid='$id'");
+	mysqli_query($conn,"delete from `sawarmo` where userid='$id'");
 	header('location:index.php');
 ?>
