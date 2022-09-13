@@ -33,20 +33,14 @@ if (!isset($_SESSION['isLogin']) || $_SESSION['isLogin'] == false) {
 </head>
 
 <body>
-	<header class="container-fluid">
-		<div class="dashboard container-fluid">
-			<!-- <a class="dashboard-btn p-2 flex-fill" href="../index.php" target="" rel="noopener noreferrer">მთავარი გვერდი</a> -->
-		</div>
+	<header>
+		<nav class="navbar navbar-dark bg-primary">
+			<a class="btn btn-outline-danger mainPage" href="../index.php" target="" rel="noopener noreferrer">მთავარი გვერდი</a>
+			<a><button class="btn btn-outline-secondary" id="my-btn">მეორე თეიბლის გამოჩენა</button></a>
+			<a><button class="btn btn-outline-secondary" id="my-btnn">მესამე თეიბლის გამოჩენა</button></a>
+			<a><button class="btn btn-outline-secondary fourth-btn" id="my-btnnn">მეოთხე თეიბლის გამოჩენა</button></a>
+		</nav>
 	</header>
-	<div class="header">
-		<a class="dashboard-btn p-2 flex-fill" href="../index.php" target="" rel="noopener noreferrer">მთავარი გვერდი</a>
-		<!-- <a href="#default" class="logo">CompanyLogo</a> -->
-		<div class="header-right">
-			<a><button id="my-btn">მეორე თეიბლის გამოჩენა</button></a>
-			<a><button id="my-btnn">მესამე თეიბლის გამოჩენა</button></a>
-			<a><button id="my-btnnn">მეოთხე თეიბლის გამოჩენა</button></a>
-		</div>
-	</div>
 	<div class="first-table container-fluid">
 		<div class="container-fluid">
 			<table border="1" class="table-responsive">
@@ -77,7 +71,7 @@ if (!isset($_SESSION['isLogin']) || $_SESSION['isLogin'] == false) {
 				<tbody>
 					<?php
 					include('conn.php');
-					$query = mysqli_query($conn, "select * from `products`");
+					$query = mysqli_query($conn, "select * from `products` limit 4");
 					while ($row = mysqli_fetch_array($query)) {
 					?>
 						<tr class="table-active">
@@ -138,7 +132,7 @@ if (!isset($_SESSION['isLogin']) || $_SESSION['isLogin'] == false) {
 				<tbody>
 					<?php
 					include('conn.php');
-					$query = mysqli_query($conn, "select * from `productss`");
+					$query = mysqli_query($conn, "select * from `productss` limit 4");
 					while ($row = mysqli_fetch_array($query)) {
 					?>
 						<tr class="table-active">
@@ -200,7 +194,7 @@ if (!isset($_SESSION['isLogin']) || $_SESSION['isLogin'] == false) {
 				<tbody>
 					<?php
 					include('conn.php');
-					$query = mysqli_query($conn, "select * from `productsss`");
+					$query = mysqli_query($conn, "select * from `productsss` limit 4");
 					while ($row = mysqli_fetch_array($query)) {
 					?>
 						<tr class="table-active">
@@ -262,7 +256,7 @@ if (!isset($_SESSION['isLogin']) || $_SESSION['isLogin'] == false) {
 				<tbody>
 					<?php
 					include('conn.php');
-					$query = mysqli_query($conn, "select * from `productssss`");
+					$query = mysqli_query($conn, "select * from `productssss` limit 4");
 					while ($row = mysqli_fetch_array($query)) {
 					?>
 						<tr class="table-active">
