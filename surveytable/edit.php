@@ -25,7 +25,7 @@ $row = mysqli_fetch_array($query);
 			<input class="saxeoba_edit p-2 flex-fill" type="text" value="<?php echo $row['saxeoba']; ?>" name="saxeoba" placeholder="სახეობა">
 			<input class="erteuli_edit p-2 flex-fill" type="text" value="<?php echo $row['erteuli']; ?>" name="erteuli" placeholder="ერთეული">
 			<input class="sabazrotve_edit p-2 flex-fill" type="text" value="<?php echo $row['sabazrotve']; ?>" name="sabazrotve" placeholder="საბაზრო თვე">
-			<input class="winatve_edit p-2 flex-fill" type="text" value="<?php echo $row['winatve']; ?>" name="winatve">
+			<input class="winatve_edit p-2 flex-fill" type="text" value="<?php echo $row['winatve']; ?>" name="winatve" placeholder="წინა თვე">
 			<input class="mimdinaretve_edit p-2 flex-fill" type="text" value="<?php echo $row['mimdinaretve']; ?>" name="mimdinaretve" placeholder="მიმდინარე თვე">
 			<input class="komentari_edit p-2 flex-fill" type="text" value="<?php echo $row['komentari']; ?>" name="komentari" placeholder="კომენტარი">
 			<input class="submit_edit p-2 flex-fill" type="submit" name="submit">

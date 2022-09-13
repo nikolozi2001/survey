@@ -190,7 +190,7 @@ td {
     justify-content: right;
 }
 
-.second-table {
+.second-table, .third-table, .fourth-table {
     display: none;
 }
 
